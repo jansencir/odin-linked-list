@@ -128,4 +128,22 @@ class LinkedList {
       current = current.nextNode;
     }
   }
+
+  // Return the index of the node containing value, or null if not found
+  find(value) {
+    let current = this.head;
+    let count = 0;
+
+    while (current) {
+      if (current.value == value) {
+        console.log(count);
+        return;
+      } else if (current.nextNode == null) {
+        console.log("Not found");
+        return;
+      }
+      current = current.nextNode;
+      count++;
+    }
+  }
 }
