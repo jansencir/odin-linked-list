@@ -185,4 +185,23 @@ class LinkedList {
 
     this.size++;
   }
+
+  // Remove a node at a given index
+  removeAt(index) {
+    // Declare variables for current, previous, and counter
+    let current = this.head;
+    let previous;
+    let count = 0;
+
+    // Traverse the linked list until you reach the index
+    while (count < index) {
+      previous = current;
+      count++;
+      current = current.nextNode;
+    }
+
+    // Once you've reached the index, change the next node of the previous one to the current nodes next node
+    previous.nextNode = current.nextNode;
+    this.size--;
+  }
 }
