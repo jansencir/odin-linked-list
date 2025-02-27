@@ -5,3 +5,11 @@ class Node {
     this.nextNode = nextNode;
   }
 };
+
+// Create a Linked List class that will represent the full list
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+}
