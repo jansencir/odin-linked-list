@@ -156,4 +156,33 @@ class LinkedList {
       current = current.nextNode;
     }
   }
+
+  // Insert a new node with the provided value into the given index
+  insertAt(value, index) {
+    // Make sure a number within the linked list's size is entered
+    if (index > 0 && index > this.size) {
+      return
+    }
+
+    const node = new Node(value);
+    // Set current to the head
+    let current = this.head;
+    // Declare previous to hold previous node
+    let previous;
+    // Keep track of linked list traversal
+    let count = 0;
+
+    while (count < index) {
+      previous = current;
+      count++;
+      current = current.nextNode;
+    }
+
+    // Once we've reached our index, set the new nodes next node to the current node
+    // Set the node before that (previous) to the new node
+    node.nextNode = current;
+    previous.nextNode = node;
+
+    this.size++;
+  }
 }
