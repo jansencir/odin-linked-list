@@ -39,5 +39,10 @@ class LinkedList {
     this.size++;
   }
 
-  
+  // Add a new node, containing a value, to the start of the list
+  prepend(value) {
+    // Set the head to the new value, and make the next node the current node
+    this.head = new Node(value, this.head);
+    this.size++;
+  }
 }
