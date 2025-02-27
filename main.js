@@ -72,4 +72,22 @@ class LinkedList {
     }
     console.log(current);
   }
+
+  // Return the node at a given index
+  atIndex(index) {
+    // Set a variable, current, to the head of the linked list
+    let current = this.head;
+    // Set a variable, count, to 0
+    let count = 0;
+
+    // Traverse the linked list until count matches value
+    while (current) {
+      if (count == index) {
+        console.log(current.value);
+      }
+      current = current.nextNode;
+      count++;
+    }
+    return null;
+  }
 }
