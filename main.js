@@ -45,4 +45,9 @@ class LinkedList {
     this.head = new Node(value, this.head);
     this.size++;
   }
+
+  // Return the total number of nodes in the list
+  sizeOf() {
+    console.log(this.size);
+  }
 }
