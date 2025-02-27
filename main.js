@@ -90,4 +90,27 @@ class LinkedList {
     }
     return null;
   }
+
+  // Remove the last element from the list
+  pop() {
+    // If empty, return
+    if (this.size === 0) {
+      return;
+    }
+
+    let current = this.head;
+    // When we get to the end, current will be null, meaning we need a variable to hold what was before it
+    let previous;
+
+    while (current) {
+      if (current.nextNode !== null) {
+        previous = current;
+        current = current.nextNode;
+      } else if (current.nextNode === null) {
+        previous.nextNode = null;
+        this.size--;
+        return;
+      }
+    }
+  }
 }
