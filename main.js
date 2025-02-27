@@ -113,4 +113,19 @@ class LinkedList {
       }
     }
   }
+
+
+  // Return true if the given value is in the list, or false if otherwise
+  contains(value) {
+    let current = this.head;
+
+    while (current) {
+      if (current.value == value) {
+        console.log("True");
+      } else if (current.nextNode == null) {
+        console.log("False");
+      }
+      current = current.nextNode;
+    }
+  }
 }
