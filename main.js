@@ -55,4 +55,21 @@ class LinkedList {
   headOf() {
     console.log(this.head);
   }
+
+  // Return the last node in the list
+  tailOf() {
+    // Set current to the head
+    let current = this.head;
+
+    // If it's empty, log it's value (null)
+    if (!current) {
+      console.log(current.nextNode);
+    }
+    
+    // While current has a next node, traverse the linked list by setting current to the next node
+    while (current.nextNode) {
+      current = current.nextNode
+    }
+    console.log(current);
+  }
 }
