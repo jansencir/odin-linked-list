@@ -50,4 +50,9 @@ class LinkedList {
   sizeOf() {
     console.log(this.size);
   }
+
+  // Return the first node in the list
+  headOf() {
+    console.log(this.head);
+  }
 }
