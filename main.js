@@ -146,4 +146,14 @@ class LinkedList {
       count++;
     }
   }
+
+  // Print the linked list as a string
+  toString() {
+    let current = this.head;
+
+    while (current) {
+      console.log(current.value);
+      current = current.nextNode;
+    }
+  }
 }
